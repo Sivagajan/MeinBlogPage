@@ -19,8 +19,6 @@ const Detailpage = (props) => {
         <>
             <Nav/>
 
-            
-
             <main className="detailPage" >
                 <img src={`http://localhost:9090/${article.picture}`} alt="" />
                 <section>
