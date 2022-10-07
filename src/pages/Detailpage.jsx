@@ -1,5 +1,7 @@
 import { useState,useEffect } from "react"
 import { useParams } from "react-router-dom" 
+import Footer from "../components/Footer"
+import Nav from "../components/Nav"
 
 const Detailpage = (props) => {
     const [article, setArticle] = useState({})
@@ -14,12 +16,13 @@ const Detailpage = (props) => {
 
     return (
 
-        <div>
-            <header>
-                <img src={`http://localhost:9090/${article.picture}`} alt="" />
-            </header>
+        <>
+            <Nav/>
 
-            <main>
+            
+
+            <main className="detailPage" >
+                <img src={`http://localhost:9090/${article.picture}`} alt="" />
                 <section>
                     <h2>{article.title}</h2>
                 </section>
@@ -28,7 +31,8 @@ const Detailpage = (props) => {
                 </section>
             </main>
 
-        </div>
+            < Footer/>
+        </>
     )
 }
 

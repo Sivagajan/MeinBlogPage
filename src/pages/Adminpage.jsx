@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
+import Nav from "../components/Nav"
 
 const Adminpage = () => {
     
@@ -37,13 +38,22 @@ const Adminpage = () => {
 
     } 
     return(
-        <div>
-            <input type="text" name="title" placeholder="Titel" onChange={(e) => setArticleTitle(e.target.value)}/>
-            <input type="file" name="picture" placeholder="Bildlink" onChange={(e) => setArticlePic(e.target.files[0])}/>
-            <textarea name="articletext" id="" cols="30" rows="10" placeholder="Artikel" onChange={(e)=> setArticleText(e.target.value)}></textarea>
+        <main className="adminPage">
+            < Nav/>
+            <section>
+                <input type="text" name="title" placeholder="Titel" onChange={(e) => setArticleTitle(e.target.value)}/>
+            </section>
+            <section>
+                <input type="file" name="picture" placeholder="Bildlink" onChange={(e) => setArticlePic(e.target.files[0])}/>
+            </section>
+            <section>
+                <textarea name="articletext" id="" cols="30" rows="10" placeholder="Artikel" onChange={(e)=> setArticleText(e.target.value)}></textarea>
+            </section>
+            <section>
+                <button onClick={sendArticle}>Publish</button>
+            </section>
 
-            <button onClick={sendArticle}>Publish</button>
-        </div>
+        </main>
     )
 }
 

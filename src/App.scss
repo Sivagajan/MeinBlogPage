@@ -1,3 +1,25 @@
 .App {
   text-align: center;
 }
+
+.adminPage{
+  display: block;
+  text-align: center;
+}
+
+.article{
+  width: 300px;
+  height: 300px;
+  contain:content;
+    img{
+      width: 100%;
+    }
+}
+
+.detailPage{
+  width: 50vw;
+    img{
+      width: 100%;
+    }
+
+}
